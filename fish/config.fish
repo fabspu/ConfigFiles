@@ -3,6 +3,9 @@ if status is-interactive
 	starship init fish | source
 	zoxide init fish | source
 
+	#Greeting
+	set -U fish_greeting "🐟"
+
 	# some more ls aliases
 	alias ll='ls -alF'
 	alias la='ls -A'
@@ -12,5 +15,15 @@ if status is-interactive
 	alias k9sr="k9s --readonly"
 	alias kgp="kubectl get pod "
 	alias kga="kubectl get all "	
+
+
+	# include k8s stuff
+	function return_k8s_cluster
+    		kubectx -c
+	end	
+
+	function return_k8s_namespace
+     		kubens -c
+	end	
 
 end

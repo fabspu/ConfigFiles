@@ -1,12 +1,11 @@
 format = """
-[←](#9A348E)\
 $username\
-[→](bg:#DA627D fg:#9A348E)\
+[▶](bg:#DA627D fg:#9A348E)\
 $directory\
-[→](fg:#DA627D bg:#FCA17D)\
+[▶](fg:#DA627D bg:#FCA17D)\
 $git_branch\
 $git_status\
-[→](fg:#FCA17D bg:#86BBD8)\
+[▶](fg:#FCA17D bg:#86BBD8)\
 $c\
 $elixir\
 $elm\
@@ -17,11 +16,13 @@ $julia\
 $nodejs\
 $nim\
 $rust\
-[→](fg:#86BBD8 bg:#06969A)\
+[▶](fg:#86BBD8 bg:#3970E4)\
 $docker_context\
-[→](fg:#06969A bg:#33658A)\
+[▶](fg:#3970E4 bg:#06969A)\
+$kubernetes\
+[▶](fg:#06969A bg:#33658A)\
 $time\
-[→ ](fg:#33658A)\
+[▶ ](fg:#33658A)\
 """
  
 # Disable the blank line at the start of the prompt
@@ -122,3 +123,11 @@ disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#33658A"
 format = '[[ 🤍 $time ](bg:#33658A)]($style)'
+
+# kubernetes
+[kubernetes]
+symbol = "☸️" 
+style = "#06969A"
+format = '[[$symbol $context $namespace](bg:#06969A)]($style)'
+disabled = false
+
