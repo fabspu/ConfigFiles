@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 
+echo "-------------------------"
 cp -r ~/.config/fish .
-echo "Updated Fish"
+echo "|   Updated Repo Fish   |"
+echo "-------------------------"
 cp -r ~/.config/kitty .
-echo "Updated Kitty"
+echo "|   Updated Repo Kitty  |"
+echo "-------------------------"
 cp ~/.config/starship.toml .
-echo "Updated Starship"
+echo "| Updated Repo Starship |"
+echo "-------------------------"
